@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/tg/:path*",
+      "destination": "/api/tg/:path*"
+    }
+  ]
+}
