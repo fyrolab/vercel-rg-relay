@@ -25,8 +25,13 @@ export default async function handler(
   // Preserve original query string (minus the catch-all path param)
   const url = new URL(`${TG_API}/${tgPath}`);
   for (const [key, value] of Object.entries(req.query)) {
-    if (key !== "path" && typeof value === "string") {
+    if (key === "path") continue;
+    if (typeof value === "string") {
       url.searchParams.set(key, value);
+    } else if (Array.isArray(value)) {
+      for (const v of value) {
+        url.searchParams.append(key, v);
+      }
     }
   }
 
