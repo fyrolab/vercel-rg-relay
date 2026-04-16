@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/tg/:path*",
-      "destination": "/api/tg/:path*"
+      "source": "/tg/(.*)",
+      "destination": "/api/proxy?path=$1"
     }
   ]
 }
