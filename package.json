@@ -1,5 +1,9 @@
 {
   "name": "vercel-rg-relay",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@vercel/node": "^5.7.7"
+  }
 }
